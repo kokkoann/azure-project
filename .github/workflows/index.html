@@ -1,0 +1,18 @@
+
+TIPOS DE ALMACENAMIENTO
+
+Azure Blob Storage >> Es una carpeta en la que podemos almacenar los tipos de datos mas comunes como archivos, imágenes, videos, backups, o sea información no estructurada o no secuencial, en pocas palabras una carpeta
+
+Azure Files>> es para trabajar con archivos, a traves de ciertas herramientas nos da la bondad de poder compartir archivos pesados que pesan GB y a traves de esto se pueden cargar los archivos y que estén actualizados.
+
+Azure Disk Storage >> Es un disco virtualizado que vive en Azure y lo podemos usar para cargar Sistemas Operativos
+
+Azure Table Storage >> Almacena información estructurado como CLAVE DE VALOR, ya sea JSON etc en donde se indica un valor o nombre para la clae y luego el valor. Por ejemplo calave: nombre Valor: Javier
+
+Azure Queue Storage >> Nosotros lo conocemos comom Colas, son para mensajes asíncronos y funciona de la mano con Azure Functions o sea Eventos para detonar acciones, estas colas son como una RAM, o sea una cola temporal en donde se almacenan mensaje s simples que detonan cierta funcionalidad, normalmente son de modo asíncrono es decir, primero petición, se ejecuta en un tercero y luego continuas usando.
+
+ACCESO FRECUENTE (HOT) >> Optimizado para los datos a los que accede o modifica con mucha frecuencia. Es el más caro por almacenamiento pero el mas económico por acceso.
+
+ACCESO ESPORÁDICO (COOL) >> Para los datos a los que accede o modifica con poca frecuencia. /al menos una vez al mes) Mas económico por almacenamiento, pero más caro por acceso que el nivel HOT.
+
+ACCESO ARCHIVO (ARCHIVE): Para datos que casi nunca se usan y tiene latencias flexibles (horas para recuperarse). Es el más barato por almacenamiento, pero el costo de acceso y recuperación es el más alto.
