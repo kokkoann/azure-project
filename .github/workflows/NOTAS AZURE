@@ -1,0 +1,60 @@
+NOTAS AZURE
+
+AVD - Azure Virtual Desktop
+VM - Virtual Machine
+
+Contenedor - empaqueta runtime, código, librerías y todas las dependencias necesarias para desplegar una aplicación.
+
+AKS -Azure Kubernetes Services
+
+Azure Functions - Equivalente a Lambda AWS, son triggers y se ejecutan solo cuando se necesitan, son serverless
+
+Azure App Service - hosting de aplicaciones web, restbull (apis), apps móviles etc
+
+Express Route - conexión física directa a Azure
+
+ARM - Azure Resource Manager - herramienta para gestionar los recursos de nube de azure
+
+conmutación por error - backup por si falla tu sistema
+
+
+TIPOS DE ALMACENAMIENTO
+
+Azure Blob Storage >> Es una carpeta en la que podemos almacenar los tipos de datos mas comunes como archivos, imágenes, videos, backups, o sea información no estructurada o no secuencial, en pocas palabras una carpeta
+
+Azure Files>> es para trabajar con archivos, a traves de ciertas herramientas nos da la bondad de poder compartir archivos pesados que pesan GB y a traves de esto se pueden cargar los archivos y que estén actualizados.
+
+Azure Disk Storage >> Es un disco virtualizado que vive en Azure y lo podemos usar para cargar Sistemas Operativos
+
+Azure Table Storage >> Almacena información estructurado como CLAVE DE VALOR, ya sea JSON etc en donde se indica un valor o nombre para la clae y luego el valor. Por ejemplo calave: nombre Valor: Javier
+
+Azure Queue Storage >> Nosotros lo conocemos comom Colas, son para mensajes asíncronos y funciona de la mano con Azure Functions o sea Eventos para detonar acciones, estas colas son como una RAM, o sea una cola temporal en donde se almacenan mensaje s simples que detonan cierta funcionalidad, normalmente son de modo asíncrono es decir, primero petición, se ejecuta en un tercero y luego continuas usando.
+
+ACCESO FRECUENTE (HOT) >> Optimizado para los datos a los que accede o modifica con mucha frecuencia. Es el más caro por almacenamiento pero el mas económico por acceso.
+
+ACCESO ESPORÁDICO (COOL) >> Para los datos a los que accede o modifica con poca frecuencia. /al menos una vez al mes) Mas económico por almacenamiento, pero más caro por acceso que el nivel HOT.
+
+ACCESO ARCHIVO (ARCHIVE): Para datos que casi nunca se usan y tiene latencias flexibles (horas para recuperarse). Es el más barato por almacenamiento, pero el costo de acceso y recuperación es el más alto.
+
+
+PROTECCION DE DATOS
+
+LRS >> Local-Redundant Storage. Los datos se replican 3 veces dentro de un único centro de datos.
+
+ZRS >> Zone-Redundant Storage. Los datos se replican en 3 zonas de disponibilidad dentro de una única región
+
+GRS >> Geo-Redundant Storage. Los datos se replican en una región secundaria a cientos de kilómetros de distancia, además de la redundancia local.
+
+GZRS >> Geo-Zone-Redundant Storage. Los datos se replican en 3 zonas de disponibilidad en la región primaria y también se replican en una región secundaria.
+
+AZURE DATABOX >> Es un disco físico para migrar grandes volúmenes de datos de terabytes a petabytes
+
+AZURE MIGRATE Y AZURE MIGRATE DATABASE
+
+
+AZ COPY >> Es una CLI para copiar datos desde y hacia Azure Storage. Util para scripts de migraciones
+
+Explorador de azure storage >> Interfaz grafica para administrar nuestros almacenamientos de Azure
+
+Azure File Sync >> Plugin replica para que la información siempre esté actualizada de un lado a otro. Hace que todo el ecosistema esté sincronizado.
+
