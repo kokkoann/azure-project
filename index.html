@@ -1,18 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tipos de Almacenamiento en Azure</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
 
-TIPOS DE ALMACENAMIENTO
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
 
-Azure Blob Storage >> Es una carpeta en la que podemos almacenar los tipos de datos mas comunes como archivos, imágenes, videos, backups, o sea información no estructurada o no secuencial, en pocas palabras una carpeta
+    h1 {
+      text-align: center;
+      color: #0078d4;
+      margin-bottom: 30px;
+    }
 
-Azure Files>> es para trabajar con archivos, a traves de ciertas herramientas nos da la bondad de poder compartir archivos pesados que pesan GB y a traves de esto se pueden cargar los archivos y que estén actualizados.
+    h2 {
+      color: #005a9e;
+      margin-top: 35px;
+      border-bottom: 2px solid #e6e6e6;
+      padding-bottom: 5px;
+    }
 
-Azure Disk Storage >> Es un disco virtualizado que vive en Azure y lo podemos usar para cargar Sistemas Operativos
+    .card {
+      background: #f9fafb;
+      border-left: 5px solid #0078d4;
+      padding: 15px 20px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
 
-Azure Table Storage >> Almacena información estructurado como CLAVE DE VALOR, ya sea JSON etc en donde se indica un valor o nombre para la clae y luego el valor. Por ejemplo calave: nombre Valor: Javier
+    .card strong {
+      color: #0078d4;
+    }
 
-Azure Queue Storage >> Nosotros lo conocemos comom Colas, son para mensajes asíncronos y funciona de la mano con Azure Functions o sea Eventos para detonar acciones, estas colas son como una RAM, o sea una cola temporal en donde se almacenan mensaje s simples que detonan cierta funcionalidad, normalmente son de modo asíncrono es decir, primero petición, se ejecuta en un tercero y luego continuas usando.
+    ul {
+      padding-left: 20px;
+    }
 
-ACCESO FRECUENTE (HOT) >> Optimizado para los datos a los que accede o modifica con mucha frecuencia. Es el más caro por almacenamiento pero el mas económico por acceso.
+    .tier {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      background: #eef5fc;
+    }
 
-ACCESO ESPORÁDICO (COOL) >> Para los datos a los que accede o modifica con poca frecuencia. /al menos una vez al mes) Mas económico por almacenamiento, pero más caro por acceso que el nivel HOT.
+    .tier.hot { border-left: 5px solid #d83b01; }
+    .tier.cool { border-left: 5px solid #107c10; }
+    .tier.archive { border-left: 5px solid #605e5c; }
 
-ACCESO ARCHIVO (ARCHIVE): Para datos que casi nunca se usan y tiene latencias flexibles (horas para recuperarse). Es el más barato por almacenamiento, pero el costo de acceso y recuperación es el más alto.
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #777;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Tipos de Almacenamiento en Azure</h1>
+
+    <h2>Servicios de Almacenamiento</h2>
+
+    <div class="card">
+      <strong>Azure Blob Storage</strong><br>
+      Almacena datos no estructurados como archivos, imágenes, videos y respaldos.
+      Funciona como una carpeta en la nube para información no secuencial.
+    </div>
+
+    <div class="card">
+      <strong>Azure Files</strong><br>
+      Permite compartir archivos de gran tamaño (GB) mediante herramientas que
+      mantienen los archivos siempre actualizados.
+    </div>
+
+    <div class="card">
+      <strong>Azure Disk Storage</strong><br>
+      Disco virtualizado en Azure utilizado principalmente para cargar
+      sistemas operativos en máquinas virtuales.
+    </div>
+
+    <div class="card">
+      <strong>Azure Table Storage</strong><br>
+      Almacenamiento estructurado tipo clave-valor (JSON).
+      <br><em>Ejemplo:</em> Clave: nombre → Valor: Javier
+    </div>
+
+    <div class="card">
+      <strong>Azure Queue Storage</strong><br>
+      Sistema de colas para mensajes asíncronos.
+      Se utiliza con Azure Functions para detonar eventos.
+      Funciona como almacenamiento temporal de mensajes.
+    </div>
+
+    <h2>Niveles de Acceso</h2>
+
+    <div class="tier hot">
+      <strong>Acceso Frecuente (Hot)</strong><br>
+      Optimizado para datos con acceso constante.
+      Es el más caro en almacenamiento, pero el más barato en acceso.
+    </div>
+
+    <div class="tier cool">
+      <strong>Acceso Esporádico (Cool)</strong><br>
+      Para datos con acceso poco frecuente (al menos una vez al mes).
+      Más económico en almacenamiento, pero más caro en acceso.
+    </div>
+
+    <div class="tier archive">
+      <strong>Acceso Archivo (Archive)</strong><br>
+      Para datos que casi nunca se usan.
+      Tiene latencias largas (horas) y el costo de recuperación es alto,
+      aunque el almacenamiento es el más barato.
+    </div>
+
+    <footer>
+      © 2025 · Almacenamiento en Microsoft Azure
+    </footer>
+  </div>
+
+</body>
+</html>
